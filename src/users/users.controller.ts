@@ -9,12 +9,6 @@ import { UsersService } from './users.service';
 export class UsersController {
   constructor(private userService: UsersService){};
 
-//   @ApiOkResponse({type: User, isArray: true})
-//   @Get()
-//   getUsers(): User[] {
-//     return this.userService.findAll(); 
-//   }
-
   @ApiOkResponse({type: User})
   @Get(':id')
   getUserById(@Param('id') id: string): User {
